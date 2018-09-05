@@ -6,7 +6,7 @@ const printDetail = (input) => {
 
   for (let key in input) {
     let item = items.find(n => n.id === key);
-    result += (item.name + " x " + input[key] + " = " + item.price * input[key] + "元\n");
+    result += item ? (item.name + " x " + input[key] + " = " + item.price * input[key] + "元\n") : '';
   }
 }
 

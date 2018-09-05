@@ -10,7 +10,7 @@ const getDecress = (input) => {
       total += items.find(n => n.id === key).price * input[key];
   }
 
-  input.total = total - 6;
+  input.discount = 6;
   input.type = promotions[0].type;
   return input;
 }

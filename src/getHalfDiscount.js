@@ -12,7 +12,7 @@ const getHalfDiscount = (input) => {
     }
   }
 
-  input.total = total;
+  input.discount = total;
   input.type = promotions[1].type;
   return input;
 }
