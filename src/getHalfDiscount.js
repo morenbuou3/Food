@@ -13,7 +13,7 @@ const getHalfDiscount = (input) => {
   }
 
   input.discount = total;
-  input.type = promotions[1].type;
+  input.type = promotions[1].type + "(黄焖鸡，凉皮)";
   return input;
 }
 

@@ -8,6 +8,8 @@ const printDetail = (input) => {
     let item = items.find(n => n.id === key);
     result += item ? (item.name + " x " + input[key] + " = " + item.price * input[key] + "元\n") : '';
   }
+
+  return result;
 }
 
 module.exports = printDetail;

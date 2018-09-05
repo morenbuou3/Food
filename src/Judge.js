@@ -1,11 +1,18 @@
 const getHalfDiscount = require('../src/getHalfDiscount')
 const getDecress = require('../src/getDecress')
+const getTotal = require('../src/getTotal')
 
 const Judge = (input) => {
-  var half = getHalfDiscount(input);
-  var descr = getDecress(input);
+  var result = getHalfDiscount(input);
+  if (result.discount < 6) {
+    result = getDecress(input);
+  }
+  if (getTotal(input) < 30) {
+    result.type = undefined;
+    result.discount = 0;
+  }
 
-  return half.total < descr.total ? half : descr;
+  return result;
 }
 
 module.exports = Judge;
